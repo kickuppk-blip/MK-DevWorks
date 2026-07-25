@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover"/>
+<title>MK DevWorks | Senior Full Stack Developer | Shakeel Ahmed</title>
+<meta name="description" content="Professional Full Stack Developer specializing in Next.js, Node.js, SaaS Platforms, E-Commerce Stores and Custom Business Solutions."/>
+<meta name="keywords" content="Full Stack Developer,Next.js,Node.js,SaaS,E-Commerce,Shakeel Ahmed,MK DevWorks,Web Developer Pakistan"/>
+<meta name="author" content="Shakeel Ahmed — MK DevWorks"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://mkdevworks.netlify.app/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://mkdevworks.netlify.app/"/>
+<meta property="og:title" content="MK DevWorks | Senior Full Stack Developer | Shakeel Ahmed"/>
+<meta property="og:description" content="Building High-Performance Websites, SaaS Platforms, E-Commerce Stores and Custom Business Solutions."/>
+<meta property="og:image" content="https://mkdevworks.netlify.app/assets/og.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="MK DevWorks | Senior Full Stack Developer"/>
+<meta name="twitter:description" content="Building High-Performance Websites, SaaS Platforms, E-Commerce Stores."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Shakeel Ahmed","jobTitle":"Senior Full Stack Developer","url":"https://mkdevworks.netlify.app/","telephone":"+923323011653","sameAs":["https://wa.me/923323011653"],"knowsAbout":["Next.js","Node.js","React","TypeScript","MongoDB","PostgreSQL","Firebase","SaaS","E-Commerce"]}</script>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="manifest" href="manifest.json"/>
+<meta name="theme-color" content="#050505"/>
+<!-- CRITICAL CSS INLINED -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--black:#050505;--black2:#0a0a0a;--glass:rgba(255,255,255,.04);
+--red:#ff1a1a;--red2:#cc0000;--red3:#e60000;
+--red-glow:rgba(255,26,26,.38);--red-dim:rgba(255,26,26,.12);
+--text:#e8e8e8;--text2:#909090;--text3:#555;
+--border:rgba(255,26,26,.2);--border2:rgba(255,255,255,.06);
+--fd:'Orbitron',monospace;--fb:'Inter',sans-serif;--fm:'JetBrains Mono',monospace;
+}
+[data-theme="light"]{
+--black:#f8f8f8;--black2:#efefef;--glass:rgba(0,0,0,.04);
+--text:#111;--text2:#444;--text3:#888;
+--border:rgba(255,26,26,.25);--border2:rgba(0,0,0,.1);
+}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--text);font-family:var(--fb);overflow-x:hidden;-webkit-font-smoothing:antialiased;cursor:none}
+</style>
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<!-- LIBS loaded synchronously so they're ready before main.js runs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+</head>
+<body>
+
+<!-- ══ CURSOR ══ -->
+<div id="c-out"></div>
+<div id="c-in"></div>
+<div id="c-trail"></div>
+
+<!-- ══ SCROLL PROGRESS ══ -->
+<div id="scroll-prog"></div>
+
+<!-- ══ PAGE TRANSITION CURTAIN ══ -->
+<div id="curtain"><div class="curtain-text">MK<span>DEVWORKS</span></div></div>
+
+<!-- ══ FILM GRAIN ══ -->
+<canvas id="grain" aria-hidden="true"></canvas>
+
+<!-- ══ SCROLL SPY DOTS ══ -->
+<nav id="spy-nav" aria-label="Section navigation">
+  <div class="spy-dot" data-section="home" data-label="Home"></div>
+  <div class="spy-dot" data-section="about" data-label="About"></div>
+  <div class="spy-dot" data-section="skills" data-label="Skills"></div>
+  <div class="spy-dot" data-section="services" data-label="Services"></div>
+  <div class="spy-dot" data-section="projects" data-label="Projects"></div>
+  <div class="spy-dot" data-section="pricing" data-label="Pricing"></div>
+  <div class="spy-dot" data-section="testimonials" data-label="Reviews"></div>
+  <div class="spy-dot" data-section="faq" data-label="FAQ"></div>
+  <div class="spy-dot" data-section="blog" data-label="Blog"></div>
+  <div class="spy-dot" data-section="contact" data-label="Contact"></div>
+</nav>
+
+<!-- loader removed -->
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" data-magnetic>
+      <svg viewBox="0 0 110 64" class="nav-logo-svg" xmlns="http://www.w3.org/2000/svg">
+        <defs><filter id="nglow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        <ellipse cx="55" cy="18" rx="11" ry="12" fill="#080000" stroke="#ff1a1a" stroke-width="0.8"/>
+        <rect x="44" y="28" width="22" height="24" rx="3.5" fill="#080000" stroke="#ff1a1a" stroke-width="0.8"/>
+        <ellipse cx="49.5" cy="16.5" rx="2.2" ry="1.8" fill="#ff1a1a" filter="url(#nglow)"/>
+        <ellipse cx="60.5" cy="16.5" rx="2.2" ry="1.8" fill="#ff1a1a" filter="url(#nglow)"/>
+        <polygon points="55,32 47,40 55,37 63,40" fill="#ff1a1a" opacity="0.8"/>
+        <text x="43" y="62" font-family="Orbitron" font-size="12" font-weight="900" fill="#ff1a1a" filter="url(#nglow)">MK</text>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nlm" data-en="DevWorks" data-ur="ڈیو ورکس">DevWorks</span>
+        <span class="nls" data-en="Full Stack Studio" data-ur="فل اسٹیک اسٹوڈیو">Full Stack Studio</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-en="Home" data-ur="ہوم">Home</a></li>
+      <li><a href="#about" class="nav-link" data-en="About" data-ur="بارے میں">About</a></li>
+      <li><a href="#skills" class="nav-link" data-en="Skills" data-ur="مہارتیں">Skills</a></li>
+      <li><a href="#services" class="nav-link" data-en="Services" data-ur="خدمات">Services</a></li>
+      <li><a href="#projects" class="nav-link" data-en="Projects" data-ur="پروجیکٹس">Projects</a></li>
+      <li><a href="#pricing" class="nav-link" data-en="Pricing" data-ur="قیمت">Pricing</a></li>
+      <li><a href="#contact" class="nav-link" data-en="Contact" data-ur="رابطہ">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <!-- Language toggle -->
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language" title="Switch to Urdu">EN</button>
+      <!-- Theme toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <a href="https://wa.me/923323011653" target="_blank" class="nav-cta" data-magnetic data-en="WhatsApp" data-ur="واٹس ایپ">WhatsApp</a>
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ FULLSCREEN NAV OVERLAY ══ -->
+<div id="nav-overlay" aria-hidden="true">
+  <div class="nvo-bg"></div>
+  <div class="nvo-inner">
+    <button class="nvo-close" id="nvoClose" aria-label="Close menu">✕</button>
+    <ul class="nvo-links">
+      <li data-i="0"><a href="#home" data-en="Home" data-ur="ہوم">Home</a></li>
+      <li data-i="1"><a href="#about" data-en="About" data-ur="بارے میں">About</a></li>
+      <li data-i="2"><a href="#skills" data-en="Skills" data-ur="مہارتیں">Skills</a></li>
+      <li data-i="3"><a href="#services" data-en="Services" data-ur="خدمات">Services</a></li>
+      <li data-i="4"><a href="#projects" data-en="Projects" data-ur="پروجیکٹس">Projects</a></li>
+      <li data-i="5"><a href="#pricing" data-en="Pricing" data-ur="قیمت">Pricing</a></li>
+      <li data-i="6"><a href="#testimonials" data-en="Reviews" data-ur="جائزے">Reviews</a></li>
+      <li data-i="7"><a href="#faq" data-en="FAQ" data-ur="سوالات">FAQ</a></li>
+      <li data-i="8"><a href="#contact" data-en="Contact" data-ur="رابطہ">Contact</a></li>
+    </ul>
+    <div class="nvo-foot">
+      <span data-en="+92 332 3011653" data-ur="+92 332 3011653">+92 332 3011653</span>
+      <span data-en="MK DevWorks © 2025" data-ur="ایم کے ڈیو ورکس © 2025">MK DevWorks © 2025</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section id="home" class="hero">
+  <canvas id="heroCanvas"></canvas>
+  <video class="hero-video" autoplay muted loop playsinline preload="none" aria-hidden="true">
+    <source src="video/hero-bg.mp4" type="video/mp4"/>
+  </video>
+  <div class="hero-overlays">
+    <div class="ho-grad"></div>
+    <div class="ho-noise"></div>
+    <div class="ho-vignette"></div>
+  </div>
+  <div class="hero-beams" aria-hidden="true">
+    <div class="hb hb1"></div><div class="hb hb2"></div><div class="hb hb3"></div>
+  </div>
+  <div id="heroStreaks"></div>
+
+  <div class="hero-content" id="heroContent">
+    <div class="hero-eyebrow split-text" data-en="Senior Full Stack Developer" data-ur="سینئر فل اسٹیک ڈویلپر">Senior Full Stack Developer</div>
+    <h1 class="hero-title">
+      <span class="hero-mk glitch-target" data-text="MK">MK</span><span class="hero-dev">DevWorks</span>
+    </h1>
+    <div class="hero-typing">
+      <span class="typing-prefix split-text" data-en="I build " data-ur="میں بناتا ہوں ">I build </span>
+      <span class="typing-text" id="typingText"></span>
+      <span class="typing-cursor">|</span>
+    </div>
+    <p class="hero-sub split-text" data-en="Building High-Performance Websites, SaaS Platforms, E-Commerce Stores and Custom Business Solutions." data-ur="اعلی کارکردگی والی ویب سائٹس، ساس پلیٹ فارمز، ای کامرس اسٹورز اور کسٹم بزنس سولیوشنز بناتا ہوں۔">
+      Building High-Performance Websites, SaaS Platforms, E-Commerce Stores and Custom Business Solutions.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/923323011653" target="_blank" class="btn-primary" data-magnetic data-en="WhatsApp Now" data-ur="ابھی واٹس ایپ کریں">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-en="WhatsApp Now" data-ur="ابھی واٹس ایپ کریں">WhatsApp Now</span>
+        <span class="btn-shine"></span>
+      </a>
+      <a href="#projects" class="btn-secondary" data-magnetic data-en="View Projects" data-ur="پروجیکٹس دیکھیں">View Projects</a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+      <span class="split-text" data-en="Scroll to explore" data-ur="اسکرول کریں">Scroll to explore</span>
+    </div>
+  </div>
+
+  <!-- Floating code card -->
+  <div class="hero-code-card" id="heroCodeCard">
+    <div class="hcc-bar"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span><span class="hcc-file">mkdevworks.ts</span></div>
+    <div class="hcc-body">
+      <div><span class="ck">const</span> <span class="cv">dev</span> = <span class="ck">new</span> <span class="cf">MKDevWorks</span>();</div>
+      <div><span class="cv">dev</span>.<span class="cf">buildSaaS</span>({ <span class="cv">stack</span>: <span class="cs">'Next.js'</span> });</div>
+      <div><span class="cv">dev</span>.<span class="cf">launchEcom</span>({ <span class="cv">rev</span>: <span class="cs">'↑40%'</span> });</div>
+      <div class="cc">// 20+ clients · 28+ projects</div>
+      <div><span class="ck">return</span> <span class="cs">"excellence"</span>;</div>
+    </div>
+  </div>
+
+  <!-- Hero stats -->
+  <div class="hero-stats" id="heroStats">
+    <div class="hs-item"><span class="hs-n odo" data-target="20">0</span><span class="hs-s">+</span><span class="hs-l" data-en="Clients" data-ur="کلائنٹس">Clients</span></div>
+    <div class="hs-div"></div>
+    <div class="hs-item"><span class="hs-n odo" data-target="28">0</span><span class="hs-s">+</span><span class="hs-l" data-en="Projects" data-ur="پروجیکٹس">Projects</span></div>
+    <div class="hs-div"></div>
+    <div class="hs-item"><span class="hs-n odo" data-target="4">0</span><span class="hs-s">+</span><span class="hs-l" data-en="Years" data-ur="سال">Years</span></div>
+    <div class="hs-div"></div>
+    <div class="hs-item"><span class="hs-n">24/7</span><span class="hs-l" data-en="Support" data-ur="سپورٹ">Support</span></div>
+  </div>
+</section>
+
+<!-- ══ CLIENT LOGOS MARQUEE ══ -->
+<div class="marquee-section" aria-label="Trusted by clients worldwide">
+  <div class="marquee-label split-text" data-en="Trusted by clients worldwide" data-ur="دنیا بھر کے کلائنٹس کا اعتماد">Trusted by clients worldwide</div>
+  <div class="marquee-track-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="m-logo">E-Commerce<span>Store</span></div>
+      <div class="m-logo">SaaS<span>Platform</span></div>
+      <div class="m-logo">Fashion<span>Brand</span></div>
+      <div class="m-logo">Tech<span>Startup</span></div>
+      <div class="m-logo">Digital<span>Agency</span></div>
+      <div class="m-logo">Home<span>Décor</span></div>
+      <div class="m-logo">Pet<span>Services</span></div>
+      <div class="m-logo">Real<span>Estate</span></div>
+      <div class="m-logo">E-Commerce<span>Store</span></div>
+      <div class="m-logo">SaaS<span>Platform</span></div>
+      <div class="m-logo">Fashion<span>Brand</span></div>
+      <div class="m-logo">Tech<span>Startup</span></div>
+      <div class="m-logo">Digital<span>Agency</span></div>
+      <div class="m-logo">Home<span>Décor</span></div>
+      <div class="m-logo">Pet<span>Services</span></div>
+      <div class="m-logo">Real<span>Estate</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="s-label split-text" data-en="// About Me" data-ur="// بارے میں">// About Me</div>
+    <h2 class="s-title split-text" data-en="The Developer Behind the Code" data-ur="کوڈ کے پیچھے ڈویلپر"><span data-en="The Developer " data-ur="ڈویلپر ">The Developer </span><span class="red" data-en="Behind the Code" data-ur="کوڈ کے پیچھے">Behind the Code</span></h2>
+    <div class="about-grid">
+      <div class="about-left gsap-left">
+        <!-- 3D HOLOGRAM MASCOT via Three.js canvas -->
+        <div class="hologram-wrap" id="hologramWrap">
+          <canvas id="hologramCanvas"></canvas>
+          <div class="holo-scanlines"></div>
+          <div class="holo-glow-ring"></div>
+          <div class="holo-label" data-en="SHAKEEL.AHMED" data-ur="شکیل احمد">SHAKEEL.AHMED</div>
+        </div>
+        <div class="mascot-status">
+          <span class="status-dot"></span>
+          <span data-en="Available for Projects" data-ur="پروجیکٹس کے لیے دستیاب">Available for Projects</span>
+        </div>
+      </div>
+      <div class="about-right gsap-right">
+        <h3 class="split-text" data-en="Shakeel Ahmed" data-ur="شکیل احمد">Shakeel Ahmed</h3>
+        <div class="about-role split-text" data-en="Senior Full Stack Developer" data-ur="سینئر فل اسٹیک ڈویلپر">Senior Full Stack Developer</div>
+        <p data-en="I'm a results-driven developer with 4+ years of hands-on experience building digital products that scale. From e-commerce stores to complex SaaS platforms, I transform business requirements into pixel-perfect, performant solutions." data-ur="میں ایک نتائج پر مبنی ڈویلپر ہوں جس کے پاس ڈیجیٹل پروڈکٹس بنانے کا 4+ سال کا تجربہ ہے۔ ای کامرس اسٹورز سے لے کر پیچیدہ ساس پلیٹ فارمز تک، میں کاروباری ضروریات کو پرفیکٹ سولیوشنز میں تبدیل کرتا ہوں۔">I'm a results-driven developer with <strong>4+ years</strong> of hands-on experience building digital products that scale. From e-commerce stores to complex SaaS platforms, I transform business requirements into pixel-perfect, performant solutions.</p>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr">2024 – Present</div><div class="tl-role" data-en="Senior Full Stack Developer" data-ur="سینئر فل اسٹیک ڈویلپر">Senior Full Stack Developer</div><div class="tl-desc" data-en="Leading complex SaaS, E-Commerce & API projects for international clients." data-ur="بین الاقوامی کلائنٹس کے لیے پیچیدہ پروجیکٹس۔">Leading complex SaaS, E-Commerce & API projects for international clients.</div></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr">2022 – 2024</div><div class="tl-role" data-en="Full Stack Developer" data-ur="فل اسٹیک ڈویلپر">Full Stack Developer</div><div class="tl-desc" data-en="Built 50+ production websites, dashboards, and Next.js applications." data-ur="50+ پروڈکشن ویب سائٹس اور ایپلیکیشنز بنائیں۔">Built 50+ production websites, dashboards, and Next.js applications.</div></div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-body"><div class="tl-yr">2020 – 2022</div><div class="tl-role" data-en="Frontend Developer" data-ur="فرنٹ اینڈ ڈویلپر">Frontend Developer</div><div class="tl-desc" data-en="Specialized in React, performance optimization, and modern UI systems." data-ur="ری ایکٹ اور پرفارمنس آپٹیمائزیشن میں مہارت۔">Specialized in React, performance optimization, and modern UI systems.</div></div></div>
+        </div>
+        <div class="about-chips">
+          <span data-en="Next.js Expert" data-ur="نیکسٹ جے ایس ماہر">Next.js Expert</span>
+          <span data-en="Node.js Specialist" data-ur="نوڈ جے ایس ماہر">Node.js Specialist</span>
+          <span data-en="E-Commerce Architect" data-ur="ای کامرس آرکیٹیکٹ">E-Commerce Architect</span>
+          <span data-en="SaaS Builder" data-ur="ساس بلڈر">SaaS Builder</span>
+          <span data-en="Performance Engineer" data-ur="پرفارمنس انجینئر">Performance Engineer</span>
+        </div>
+        <a href="https://wa.me/923323011653" target="_blank" class="btn-primary mt-20" data-magnetic>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-en="Let's Talk" data-ur="بات کریں">Let's Talk</span>
+          <span class="btn-shine"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ══ -->
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <div class="s-label split-text" data-en="// Tech Stack" data-ur="// ٹیک اسٹیک">// Tech Stack</div>
+    <h2 class="s-title split-text" data-en="Skills &amp; Expertise" data-ur="مہارتیں اور تجربہ">Skills & <span class="red" data-en="Expertise" data-ur="تجربہ">Expertise</span></h2>
+    <div class="skill-tabs">
+      <button class="stab active" data-cat="all" data-en="All" data-ur="سب">All</button>
+      <button class="stab" data-cat="frontend" data-en="Frontend" data-ur="فرنٹ اینڈ">Frontend</button>
+      <button class="stab" data-cat="backend" data-en="Backend" data-ur="بیک اینڈ">Backend</button>
+      <button class="stab" data-cat="tools" data-en="Tools" data-ur="ٹولز">Tools</button>
+    </div>
+    <div class="skills-grid" id="skillsGrid">
+      <div class="skill-card stagger-card" data-cat="frontend"><div class="sk-icon sk-html"></div><div class="sk-name">HTML5</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="98"></div></div><div class="sk-pct">98%</div></div>
+      <div class="skill-card stagger-card" data-cat="frontend"><div class="sk-icon sk-css"></div><div class="sk-name">CSS3</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="95"></div></div><div class="sk-pct">95%</div></div>
+      <div class="skill-card stagger-card" data-cat="frontend"><div class="sk-icon sk-js"></div><div class="sk-name">JavaScript</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="95"></div></div><div class="sk-pct">95%</div></div>
+      <div class="skill-card stagger-card" data-cat="frontend"><div class="sk-icon sk-ts"></div><div class="sk-name">TypeScript</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="88"></div></div><div class="sk-pct">88%</div></div>
+      <div class="skill-card stagger-card" data-cat="frontend"><div class="sk-icon sk-react"></div><div class="sk-name">React.js</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="93"></div></div><div class="sk-pct">93%</div></div>
+      <div class="skill-card stagger-card" data-cat="frontend"><div class="sk-icon sk-next"></div><div class="sk-name">Next.js</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="92"></div></div><div class="sk-pct">92%</div></div>
+      <div class="skill-card stagger-card" data-cat="frontend"><div class="sk-icon sk-tw"></div><div class="sk-name">Tailwind CSS</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="96"></div></div><div class="sk-pct">96%</div></div>
+      <div class="skill-card stagger-card" data-cat="backend"><div class="sk-icon sk-node"></div><div class="sk-name">Node.js</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="90"></div></div><div class="sk-pct">90%</div></div>
+      <div class="skill-card stagger-card" data-cat="backend"><div class="sk-icon sk-exp"></div><div class="sk-name">Express.js</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="88"></div></div><div class="sk-pct">88%</div></div>
+      <div class="skill-card stagger-card" data-cat="backend"><div class="sk-icon sk-mongo"></div><div class="sk-name">MongoDB</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="85"></div></div><div class="sk-pct">85%</div></div>
+      <div class="skill-card stagger-card" data-cat="backend"><div class="sk-icon sk-pg"></div><div class="sk-name">PostgreSQL</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="82"></div></div><div class="sk-pct">82%</div></div>
+      <div class="skill-card stagger-card" data-cat="backend"><div class="sk-icon sk-fire"></div><div class="sk-name">Firebase</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="88"></div></div><div class="sk-pct">88%</div></div>
+      <div class="skill-card stagger-card" data-cat="tools"><div class="sk-icon sk-api"></div><div class="sk-name">REST APIs</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="92"></div></div><div class="sk-pct">92%</div></div>
+      <div class="skill-card stagger-card" data-cat="tools"><div class="sk-icon sk-seo"></div><div class="sk-name">SEO</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="90"></div></div><div class="sk-pct">90%</div></div>
+      <div class="skill-card stagger-card" data-cat="tools"><div class="sk-icon sk-perf"></div><div class="sk-name">Performance</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="94"></div></div><div class="sk-pct">94%</div></div>
+      <div class="skill-card stagger-card" data-cat="tools"><div class="sk-icon sk-wp"></div><div class="sk-name">WordPress</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="88"></div></div><div class="sk-pct">88%</div></div>
+      <div class="skill-card stagger-card" data-cat="tools"><div class="sk-icon sk-odoo"></div><div class="sk-name">Odoo</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="80"></div></div><div class="sk-pct">80%</div></div>
+      <div class="skill-card stagger-card" data-cat="tools"><div class="sk-icon sk-figma"></div><div class="sk-name">Figma</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="85"></div></div><div class="sk-pct">85%</div></div>
+      <div class="skill-card stagger-card" data-cat="tools"><div class="sk-icon sk-claude"></div><div class="sk-name">Claude Code</div><div class="sk-bar-wrap"><div class="sk-bar" data-w="90"></div></div><div class="sk-pct">90%</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services" class="section services-section">
+  <div class="container">
+    <div class="s-label split-text" data-en="// What I Do" data-ur="// میں کیا کرتا ہوں">// What I Do</div>
+    <h2 class="s-title split-text" data-en="Services &amp; Solutions" data-ur="خدمات اور حل">Services & <span class="red">Solutions</span></h2>
+    <div class="services-grid">
+      <div class="service-card stagger-card" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15"><div class="svc-icon-w"><svg class="svc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M7 8l3 3-3 3M13 14h4"/></svg></div><h3 data-en="Full Stack Dev" data-ur="فل اسٹیک ڈیو">Full Stack Dev</h3><p data-en="End-to-end web apps with modern frameworks, scalable architecture, clean code." data-ur="جدید فریم ورکس کے ساتھ مکمل ویب ایپلیکیشنز۔">End-to-end web apps with modern frameworks, scalable architecture, clean code.</p><div class="svc-tag">Next.js · Node.js · MongoDB</div></div>
+      <div class="service-card stagger-card" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15"><div class="svc-icon-w"><svg class="svc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div><h3 data-en="E-Commerce Dev" data-ur="ای کامرس ڈیو">E-Commerce Dev</h3><p data-en="High-converting online stores with seamless UX and payment integration." data-ur="بہترین آن لائن اسٹورز اور پیمنٹ انٹیگریشن۔">High-converting online stores with seamless UX and payment integration.</p><div class="svc-tag">Shopify · Custom · Firebase</div></div>
+      <div class="service-card stagger-card" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15"><div class="svc-icon-w"><svg class="svc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/><path d="M12 17v-5M9.5 14.5L12 12l2.5 2.5"/></svg></div><h3 data-en="SaaS Development" data-ur="ساس ڈویلپمنٹ">SaaS Development</h3><p data-en="Scalable SaaS platforms with auth, billing, dashboards, multi-tenant architecture." data-ur="قابل توسیع ساس پلیٹ فارمز مکمل فیچرز کے ساتھ۔">Scalable SaaS platforms with auth, billing, dashboards, multi-tenant architecture.</p><div class="svc-tag">Next.js · Stripe · PostgreSQL</div></div>
+      <div class="service-card stagger-card" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15"><div class="svc-icon-w"><svg class="svc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3 data-en="Landing Pages" data-ur="لینڈنگ پیجز">Landing Pages</h3><p data-en="Conversion-focused landing pages with cinematic design and blazing speed." data-ur="کنورژن فوکسڈ لینڈنگ پیجز بہترین ڈیزائن کے ساتھ۔">Conversion-focused landing pages with cinematic design and blazing speed.</p><div class="svc-tag">React · Tailwind · SEO</div></div>
+      <div class="service-card stagger-card" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15"><div class="svc-icon-w"><svg class="svc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17h7M14 21h4"/></svg></div><h3 data-en="Custom Dashboards" data-ur="کسٹم ڈیش بورڈز">Custom Dashboards</h3><p data-en="Powerful admin dashboards with real-time data, charts, user management." data-ur="ریئل ٹائم ڈیٹا کے ساتھ طاقتور ڈیش بورڈز۔">Powerful admin dashboards with real-time data, charts, user management.</p><div class="svc-tag">React · D3.js · REST APIs</div></div>
+      <div class="service-card stagger-card" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15"><div class="svc-icon-w"><svg class="svc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07L11.75 5.75"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07L12.25 18.25"/></svg></div><h3 data-en="API Integration" data-ur="اے پی آئی انٹیگریشن">API Integration</h3><p data-en="Payment gateways, CRMs, analytics, and custom REST/GraphQL APIs seamlessly." data-ur="پیمنٹ گیٹ ویز اور کسٹم اے پی آئی انٹیگریشن۔">Payment gateways, CRMs, analytics, and custom REST/GraphQL APIs seamlessly.</p><div class="svc-tag">REST · GraphQL · Webhooks</div></div>
+      <div class="service-card stagger-card" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15"><div class="svc-icon-w"><svg class="svc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div><h3 data-en="Web Optimization" data-ur="ویب آپٹیمائزیشن">Web Optimization</h3><p data-en="Speed audits, Core Web Vitals fixes, SEO and Lighthouse score 95+." data-ur="اسپیڈ آڈٹ، سی ڈبلیو وی فکسز اور لائٹ ہاؤس اسکور۔">Speed audits, Core Web Vitals fixes, SEO and Lighthouse score 95+.</p><div class="svc-tag">Lighthouse · SEO · Performance</div></div>
+      <div class="service-card stagger-card" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15"><div class="svc-icon-w"><svg class="svc-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div><h3 data-en="Maintenance" data-ur="دیکھ بھال">Maintenance</h3><p data-en="24/7 ongoing support, bug fixes, feature updates, proactive monitoring." data-ur="24/7 سپورٹ، بگ فکسز اور فیچر اپڈیٹس۔">24/7 ongoing support, bug fixes, feature updates, proactive monitoring.</p><div class="svc-tag">24/7 · Updates · Support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS — HORIZONTAL SCROLL ══ -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <div class="s-label split-text" data-en="// Portfolio" data-ur="// پورٹ فولیو">// Portfolio</div>
+    <h2 class="s-title split-text" data-en="Featured Projects" data-ur="نمایاں پروجیکٹس">Featured <span class="red">Projects</span></h2>
+  </div>
+  <!-- HORIZONTAL SCROLL STRIP -->
+  <div class="hscroll-wrap" id="hscrollWrap">
+    <div class="hscroll-track" id="hscrollTrack">
+
+      <!-- Project 1 -->
+      <div class="proj-card">
+        <div class="proj-mockup">
+          <div class="pm-bar"><span class="pmd" style="background:#ff5f57"></span><span class="pmd" style="background:#febc2e"></span><span class="pmd" style="background:#28c840"></span><span class="pm-url">thevelvetnest.store</span></div>
+          <div class="pm-screen" style="background:linear-gradient(135deg,#1a0005,#0d0008,#0d0d0d)">
+            <div class="pms-nav"><div class="pms-logo">The Velvet Nest</div><div class="pms-links"><span></span><span></span><span></span></div></div>
+            <div class="pms-hero"><div class="pms-h1">Premium Home Décor</div><div class="pms-h2">Islamic Art Collection</div><div class="pms-btn" style="background:var(--red)"></div></div>
+            <div class="pms-grid"><div class="pms-c"></div><div class="pms-c"></div><div class="pms-c"></div></div>
+          </div>
+          <div class="proj-hover"><a href="https://thevelvetnest.store/" target="_blank" class="proj-visit-btn" data-en="Visit Live Site ↗" data-ur="لائیو سائٹ دیکھیں ↗">Visit Live Site ↗</a></div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-num">01</div>
+          <h3 data-en="The Velvet Nest" data-ur="دی ویلویٹ نیسٹ">The Velvet Nest</h3>
+          <p data-en="Premium Pakistani home décor & Islamic art e-commerce. Firebase backend, Vite frontend, guest checkout, SEO-optimized with canonical/OG tags." data-ur="پریمیم پاکستانی ہوم ڈیکور ای کامرس — فائر بیس، وائٹ، گیسٹ چیک آؤٹ، SEO آپٹیمائزڈ۔">Premium Pakistani home décor & Islamic art e-commerce. Firebase backend, Vite frontend, guest checkout, SEO-optimized.</p>
+          <div class="proj-tags"><span>Vite</span><span>Firebase</span><span>SEO</span><span>Auth</span></div>
+          <!-- Case study expand -->
+          <button class="case-toggle" data-en="View Case Study ↓" data-ur="کیس اسٹڈی دیکھیں ↓">View Case Study ↓</button>
+          <div class="case-body">
+            <div class="case-row"><strong data-en="Problem:" data-ur="مسئلہ:">Problem:</strong> <span data-en="Needed a premium e-commerce with guest checkout and Arabic/Urdu product names." data-ur="گیسٹ چیک آؤٹ اور عربی/اردو پروڈکٹ ناموں کے ساتھ پریمیم ای کامرس درکار تھا۔">Needed a premium e-commerce with guest checkout and Arabic/Urdu product names.</span></div>
+            <div class="case-row"><strong data-en="Stack:" data-ur="اسٹیک:">Stack:</strong> Vite · Firebase Firestore · Firebase Auth · Netlify</div>
+            <div class="case-row"><strong data-en="Result:" data-ur="نتیجہ:">Result:</strong> <span data-en="Lighthouse 96 · 40% conversion uplift · Full SEO coverage." data-ur="لائٹ ہاؤس 96 · 40% کنورژن اضافہ · مکمل SEO کوریج۔">Lighthouse 96 · 40% conversion uplift · Full SEO coverage.</span></div>
+          </div>
+          <a href="https://thevelvetnest.store/" target="_blank" class="proj-link">thevelvetnest.store ↗</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="proj-card">
+        <div class="proj-mockup">
+          <div class="pm-bar"><span class="pmd" style="background:#ff5f57"></span><span class="pmd" style="background:#febc2e"></span><span class="pmd" style="background:#28c840"></span><span class="pm-url">zohahaoutfit.com</span></div>
+          <div class="pm-screen" style="background:linear-gradient(135deg,#00051a,#000d1a,#0d0d0d)">
+            <div class="pms-nav"><div class="pms-logo">Zohaha Outfit</div><div class="pms-links"><span></span><span></span><span></span></div></div>
+            <div class="pms-hero"><div class="pms-h1">Fashion Forward</div><div class="pms-h2">Latest Collections</div><div class="pms-btn" style="background:#0044ff"></div></div>
+            <div class="pms-grid"><div class="pms-c"></div><div class="pms-c"></div><div class="pms-c"></div></div>
+          </div>
+          <div class="proj-hover"><a href="https://zohahaoutfit.com/" target="_blank" class="proj-visit-btn">Visit Live Site ↗</a></div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-num">02</div>
+          <h3>Zohaha Outfit</h3>
+          <p data-en="Modern fashion e-commerce platform. Mobile-first responsive design, optimized checkout experience built for conversion." data-ur="جدید فیشن ای کامرس پلیٹ فارم — موبائل فرسٹ، آپٹیمائزڈ چیک آؤٹ۔">Modern fashion e-commerce platform. Mobile-first responsive design, optimized checkout experience built for conversion.</p>
+          <div class="proj-tags"><span>E-Commerce</span><span>Responsive</span><span>Performance</span></div>
+          <button class="case-toggle">View Case Study ↓</button>
+          <div class="case-body">
+            <div class="case-row"><strong>Problem:</strong> Legacy site with poor mobile UX and slow load times.</div>
+            <div class="case-row"><strong>Stack:</strong> HTML · CSS · JS · Custom CMS</div>
+            <div class="case-row"><strong>Result:</strong> 3x faster load · Mobile bounce rate -55% · SEO rank ↑</div>
+          </div>
+          <a href="https://zohahaoutfit.com/" target="_blank" class="proj-link">zohahaoutfit.com ↗</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="proj-card">
+        <div class="proj-mockup">
+          <div class="pm-bar"><span class="pmd" style="background:#ff5f57"></span><span class="pmd" style="background:#febc2e"></span><span class="pmd" style="background:#28c840"></span><span class="pm-url">petstoolhub.netlify.app</span></div>
+          <div class="pm-screen" style="background:linear-gradient(135deg,#001a05,#001a10,#0d0d0d)">
+            <div class="pms-nav"><div class="pms-logo">Pets Tool Hub</div><div class="pms-links"><span></span><span></span><span></span></div></div>
+            <div class="pms-hero"><div class="pms-h1">Pet Care Tools</div><div class="pms-h2">Interactive Guides</div><div class="pms-btn" style="background:#00aa44"></div></div>
+            <div class="pms-grid"><div class="pms-c"></div><div class="pms-c"></div><div class="pms-c"></div></div>
+          </div>
+          <div class="proj-hover"><a href="https://petstoolhub.netlify.app/" target="_blank" class="proj-visit-btn">Visit Live Site ↗</a></div>
+        </div>
+        <div class="proj-info">
+          <div class="proj-num">03</div>
+          <h3>Pets Tool Hub</h3>
+          <p data-en="Comprehensive pet care resource platform with interactive tools, guides, and clean intuitive UI deployed on Netlify." data-ur="انٹرایکٹو ٹولز اور گائیڈز کے ساتھ پالتو جانوروں کی دیکھ بھال کا پلیٹ فارم۔">Comprehensive pet care resource platform with interactive tools, guides, and clean intuitive UI deployed on Netlify.</p>
+          <div class="proj-tags"><span>Netlify</span><span>JavaScript</span><span>UI/UX</span></div>
+          <button class="case-toggle">View Case Study ↓</button>
+          <div class="case-body">
+            <div class="case-row"><strong>Problem:</strong> Pet owners needed a one-stop resource for tools and guides.</div>
+            <div class="case-row"><strong>Stack:</strong> Vanilla JS · CSS3 · Netlify CDN</div>
+            <div class="case-row"><strong>Result:</strong> Lighthouse 98 · Avg session time 4min · Zero downtime</div>
+          </div>
+          <a href="https://petstoolhub.netlify.app/" target="_blank" class="proj-link">petstoolhub.netlify.app ↗</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="hscroll-arrows">
+      <button class="hsa" id="hsLeft">&#8592;</button>
+      <span id="hsProg" class="hs-prog-text">01 / 03</span>
+      <button class="hsa" id="hsRight">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ══ -->
+<section id="pricing" class="section pricing-section">
+  <div class="container">
+    <div class="s-label split-text" data-en="// Investment" data-ur="// سرمایہ کاری">// Investment</div>
+    <h2 class="s-title split-text" data-en="Packages &amp; Pricing" data-ur="پیکجز اور قیمتیں">Packages & <span class="red">Pricing</span></h2>
+
+    <!-- Currency + Location bar -->
+    <div class="currency-bar">
+      <div class="cb-left">
+        <div class="cb-flag" id="cbFlag">🌍</div>
+        <div class="cb-info">
+          <span class="cb-detected" id="cbDetected">Detecting your location...</span>
+          <span class="cb-note" data-en="Prices shown in your local currency" data-ur="قیمتیں آپ کی مقامی کرنسی میں">Prices shown in your local currency</span>
+        </div>
+      </div>
+      <div class="cb-right">
+        <label class="cb-label" data-en="Currency:" data-ur="کرنسی:">Currency:</label>
+        <select class="cb-select" id="currencySelect">
+          <option value="USD">🇺🇸 USD — US Dollar</option>
+          <option value="PKR">🇵🇰 PKR — Pakistani Rupee</option>
+          <option value="GBP">🇬🇧 GBP — British Pound</option>
+          <option value="EUR">🇪🇺 EUR — Euro</option>
+          <option value="AED">🇦🇪 AED — UAE Dirham</option>
+          <option value="SAR">🇸🇦 SAR — Saudi Riyal</option>
+          <option value="INR">🇮🇳 INR — Indian Rupee</option>
+          <option value="CAD">🇨🇦 CAD — Canadian Dollar</option>
+          <option value="AUD">🇦🇺 AUD — Australian Dollar</option>
+          <option value="BDT">🇧🇩 BDT — Bangladeshi Taka</option>
+          <option value="MYR">🇲🇾 MYR — Malaysian Ringgit</option>
+          <option value="TRY">🇹🇷 TRY — Turkish Lira</option>
+          <option value="NGN">🇳🇬 NGN — Nigerian Naira</option>
+          <option value="KES">🇰🇪 KES — Kenyan Shilling</option>
+          <option value="EGP">🇪🇬 EGP — Egyptian Pound</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Service Category Tabs -->
+    <div class="pricing-cats" id="pricingCats">
+      <button class="pcat active" data-cat="landing" data-en="Landing Pages" data-ur="لینڈنگ پیجز">Landing Pages</button>
+      <button class="pcat" data-cat="ecom" data-en="E-Commerce" data-ur="ای کامرس">E-Commerce</button>
+      <button class="pcat" data-cat="saas" data-en="SaaS / Full Stack" data-ur="ساس / فل اسٹیک">SaaS / Full Stack</button>
+      <button class="pcat" data-cat="uiux" data-en="UI/UX Design" data-ur="UI/UX ڈیزائن">UI/UX Design</button>
+      <button class="pcat" data-cat="frontend" data-en="Frontend Only" data-ur="فرنٹ اینڈ">Frontend Only</button>
+      <button class="pcat" data-cat="maint" data-en="Maintenance" data-ur="دیکھ بھال">Maintenance</button>
+    </div>
+
+    <!-- ─── LANDING PAGES ─── -->
+    <div class="pricing-panel active" id="panel-landing">
+      <div class="pricing-grid">
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">Starter</div>
+          <div class="pc-for" data-en="Simple 1-page site" data-ur="سادہ 1 پیج سائٹ">Simple 1-page site</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="75">75</span></div>
+            <div class="pc-per" data-en="/project" data-ur="/پروجیکٹ">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span data-en="Delivery: 2–3 days" data-ur="ڈیلیوری: 2-3 دن">Delivery: 2–3 days</span></div>
+          <div class="pc-revisions">🔄 <span data-en="1 Free Revision" data-ur="1 مفت ترمیم">1 Free Revision</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 1-page responsive design</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Custom hero + CTA sections</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> WhatsApp / contact button</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Mobile responsive</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Netlify deploy</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#999" stroke-width="2"><line x1="2" y1="7" x2="12" y2="7"/></svg> <span style="opacity:.4">Custom animations</span></li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#999" stroke-width="2"><line x1="2" y1="7" x2="12" y2="7"/></svg> <span style="opacity:.4">Blog / CMS</span></li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi%20Shakeel!%20I'm%20interested%20in%20the%20Landing%20Page%20Starter%20package." target="_blank" class="btn-secondary pc-btn" data-magnetic>Order Now</a>
+        </div>
+
+        <div class="price-card price-card--featured stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-badge-hot">🔥 Most Popular</div>
+          <div class="pc-tier">Pro</div>
+          <div class="pc-for" data-en="Multi-section premium site" data-ur="ملٹی سیکشن پریمیم سائٹ">Multi-section premium site</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="150">150</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 4–6 days</span></div>
+          <div class="pc-revisions">🔄 <span>3 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Everything in Starter</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 5–8 sections (hero, about, services, FAQ, contact)</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> GSAP scroll animations</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Testimonials carousel</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Full SEO (OG, JSON-LD, sitemap)</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Lighthouse 90+ score</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 30-day support</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi%20Shakeel!%20I'm%20interested%20in%20the%20Landing%20Page%20Pro%20package." target="_blank" class="btn-primary pc-btn" data-magnetic>Order Now <span class="btn-shine"></span></a>
+        </div>
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">Cinematic</div>
+          <div class="pc-for">Premium luxury site (like this one)</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="299">299</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 7–10 days</span></div>
+          <div class="pc-revisions">🔄 <span>5 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Everything in Pro</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Three.js / WebGL hero effects</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Custom cursor + magnetic buttons</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Cinematic preloader</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Lenis smooth scroll</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Bilingual EN/Urdu support</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 60-day support</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi%20Shakeel!%20I'm%20interested%20in%20the%20Cinematic%20Landing%20Page%20package." target="_blank" class="btn-secondary pc-btn" data-magnetic>Order Now</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── E-COMMERCE ─── -->
+    <div class="pricing-panel" id="panel-ecom">
+      <div class="pricing-grid">
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">Basic Store</div>
+          <div class="pc-for">Small product catalog, simple checkout</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="199">199</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 7–10 days</span></div>
+          <div class="pc-revisions">🔄 <span>2 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Up to 20 products</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Product listing + detail pages</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Cart + WhatsApp order</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Firebase or static backend</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Mobile responsive</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Basic SEO</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20Basic%20E-Commerce%20package." target="_blank" class="btn-secondary pc-btn" data-magnetic>Order Now</a>
+        </div>
+
+        <div class="price-card price-card--featured stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-badge-hot">🔥 Most Popular</div>
+          <div class="pc-tier">Full Store</div>
+          <div class="pc-for">Full e-commerce with auth & payments</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="399">399</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 2–3 weeks</span></div>
+          <div class="pc-revisions">🔄 <span>4 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Unlimited products + categories</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Firebase Auth (Google, email)</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Guest checkout support</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Order tracking dashboard</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Admin panel (add/edit products)</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Full SEO + OG tags</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> WebP image optimization</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 45-day support</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20Full%20E-Commerce%20package." target="_blank" class="btn-primary pc-btn" data-magnetic>Order Now <span class="btn-shine"></span></a>
+        </div>
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">Enterprise Store</div>
+          <div class="pc-for">Multi-vendor, advanced features</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="699">699</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 4–6 weeks</span></div>
+          <div class="pc-revisions">🔄 <span>Unlimited Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Everything in Full Store</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Stripe / PayPal / crypto payments</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Multi-vendor support</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Inventory + analytics dashboard</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Email notifications (SendGrid)</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Custom domain + SSL setup</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 90-day support</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20Enterprise%20E-Commerce%20package." target="_blank" class="btn-secondary pc-btn" data-magnetic>Order Now</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── SAAS / FULL STACK ─── -->
+    <div class="pricing-panel" id="panel-saas">
+      <div class="pricing-grid">
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">MVP</div>
+          <div class="pc-for">Validate your idea fast</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="299">299</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 2–3 weeks</span></div>
+          <div class="pc-revisions">🔄 <span>3 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Next.js frontend</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Firebase / Node.js backend</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Auth (email + social)</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> User dashboard</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 3 core features</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Vercel / Netlify deploy</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20SaaS%20MVP%20package." target="_blank" class="btn-secondary pc-btn" data-magnetic>Order Now</a>
+        </div>
+
+        <div class="price-card price-card--featured stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-badge-hot">🔥 Best Value</div>
+          <div class="pc-tier">Growth</div>
+          <div class="pc-for">Full SaaS with billing & analytics</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="599">599</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 4–6 weeks</span></div>
+          <div class="pc-revisions">🔄 <span>5 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Everything in MVP</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Stripe subscription billing</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Multi-role user system</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Admin analytics dashboard</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> REST API architecture</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Email notifications</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> PostgreSQL / MongoDB</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 60-day support</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20SaaS%20Growth%20package." target="_blank" class="btn-primary pc-btn" data-magnetic>Order Now <span class="btn-shine"></span></a>
+        </div>
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">Enterprise</div>
+          <div class="pc-for">Complex multi-tenant platform</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="999">999</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 8–12 weeks</span></div>
+          <div class="pc-revisions">🔄 <span>Unlimited Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Everything in Growth</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Multi-tenant architecture</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> GraphQL API layer</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Real-time features (WebSockets)</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> CI/CD pipeline setup</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Security audit + testing</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 90-day priority support</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20SaaS%20Enterprise%20package." target="_blank" class="btn-secondary pc-btn" data-magnetic>Order Now</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── UI/UX DESIGN ─── -->
+    <div class="pricing-panel" id="panel-uiux">
+      <div class="pricing-grid">
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">Wireframe</div>
+          <div class="pc-for">Low-fidelity UX blueprint</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="79">79</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 3–4 days</span></div>
+          <div class="pc-revisions">🔄 <span>2 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Up to 8 screens</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> User flow mapping</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Figma deliverable</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Component inventory</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#999" stroke-width="2"><line x1="2" y1="7" x2="12" y2="7"/></svg> <span style="opacity:.4">High-fidelity visuals</span></li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20Wireframe%20UI/UX%20package." target="_blank" class="btn-secondary pc-btn" data-magnetic>Order Now</a>
+        </div>
+
+        <div class="price-card price-card--featured stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-badge-hot">🔥 Most Popular</div>
+          <div class="pc-tier">Full UI/UX</div>
+          <div class="pc-for">High-fidelity design system</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="199">199</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 7–10 days</span></div>
+          <div class="pc-revisions">🔄 <span>4 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Up to 15 screens</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Full color + typography system</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Component library (Figma)</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Mobile + desktop layouts</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Clickable prototype</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Dev handoff notes</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Dark + light variants</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20Full%20UI/UX%20Design%20package." target="_blank" class="btn-primary pc-btn" data-magnetic>Order Now <span class="btn-shine"></span></a>
+        </div>
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">Design + Code</div>
+          <div class="pc-for">Full design AND pixel-perfect HTML/CSS</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="349">349</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 10–14 days</span></div>
+          <div class="pc-revisions">🔄 <span>5 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Full UI/UX (all above)</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Pixel-perfect HTML/CSS/JS</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> GSAP micro-animations</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> React component conversion</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Cross-browser tested</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 30-day support</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20Design%20+%20Code%20package." target="_blank" class="btn-secondary pc-btn" data-magnetic>Order Now</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── FRONTEND ONLY ─── -->
+    <div class="pricing-panel" id="panel-frontend">
+      <div class="pricing-grid">
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">HTML/CSS</div>
+          <div class="pc-for">Static frontend from your design</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="99">99</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 3–5 days</span></div>
+          <div class="pc-revisions">🔄 <span>2 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Semantic HTML5</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> CSS3 / Tailwind CSS</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Responsive (mobile + desktop)</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Cross-browser compatible</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#999" stroke-width="2"><line x1="2" y1="7" x2="12" y2="7"/></svg> <span style="opacity:.4">React / JS interactions</span></li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20HTML/CSS%20Frontend%20package." target="_blank" class="btn-secondary pc-btn" data-magnetic>Order Now</a>
+        </div>
+
+        <div class="price-card price-card--featured stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-badge-hot">🔥 Most Popular</div>
+          <div class="pc-tier">React / Next.js</div>
+          <div class="pc-for">Interactive component-based frontend</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="249">249</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 1–2 weeks</span></div>
+          <div class="pc-revisions">🔄 <span>4 Free Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Next.js / React setup</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> TypeScript configured</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Tailwind CSS design system</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> GSAP / Framer animations</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> API integration ready</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Dark/light theme system</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 30-day support</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20React/Next.js%20Frontend%20package." target="_blank" class="btn-primary pc-btn" data-magnetic>Order Now <span class="btn-shine"></span></a>
+        </div>
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">Premium UI</div>
+          <div class="pc-for">Agency-grade animated frontend</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="449">449</span></div>
+            <div class="pc-per">/project</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Delivery: 2–3 weeks</span></div>
+          <div class="pc-revisions">🔄 <span>Unlimited Revisions</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Everything in React/Next.js</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Three.js / WebGL effects</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Custom cursor system</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Lenis smooth scroll</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> SplitText reveals</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Awwwards-quality output</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 60-day support</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20Premium%20UI%20Frontend%20package." target="_blank" class="btn-secondary pc-btn" data-magnetic>Order Now</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── MAINTENANCE ─── -->
+    <div class="pricing-panel" id="panel-maint">
+      <div class="pricing-grid">
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">Basic</div>
+          <div class="pc-for">Bug fixes + minor updates</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="29">29</span></div>
+            <div class="pc-per">/month</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Response: within 24h</span></div>
+          <div class="pc-revisions">🔄 <span>Up to 3 tasks/month</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Bug fixes</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Content updates</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Monthly uptime check</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> WhatsApp support</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20Basic%20Maintenance%20plan." target="_blank" class="btn-secondary pc-btn" data-magnetic>Subscribe</a>
+        </div>
+
+        <div class="price-card price-card--featured stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-badge-hot">🔥 Most Popular</div>
+          <div class="pc-tier">Pro Care</div>
+          <div class="pc-for">Priority support + feature adds</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="59">59</span></div>
+            <div class="pc-per">/month</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Response: within 4h</span></div>
+          <div class="pc-revisions">🔄 <span>Up to 10 tasks/month</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Everything in Basic</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> New feature development</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Performance monitoring</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> SEO monthly audit</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Backup & security checks</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Priority WhatsApp line</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20Pro%20Care%20Maintenance%20plan." target="_blank" class="btn-primary pc-btn" data-magnetic>Subscribe <span class="btn-shine"></span></a>
+        </div>
+
+        <div class="price-card stagger-card" data-tilt data-tilt-max="6">
+          <div class="pc-tier">Agency Partner</div>
+          <div class="pc-for">Dedicated dev hours, white-label</div>
+          <div class="pc-price-wrap">
+            <div class="pc-price"><span class="pc-sym">$</span><span class="pc-num" data-usd="129">129</span></div>
+            <div class="pc-per">/month</div>
+          </div>
+          <div class="pc-delivery">⏱ <span>Response: within 1h</span></div>
+          <div class="pc-revisions">🔄 <span>Unlimited tasks</span></div>
+          <ul class="pc-feats">
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Everything in Pro Care</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> 20h dedicated dev time</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> White-label available</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> NDA on request</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Weekly progress calls</li>
+            <li><svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="#ff1a1a" stroke-width="2"><polyline points="1.5 7 5 10.5 12.5 3"/></svg> Invoice / receipt provided</li>
+          </ul>
+          <a href="https://wa.me/923323011653?text=Hi!%20Interested%20in%20Agency%20Partner%20plan." target="_blank" class="btn-secondary pc-btn" data-magnetic>Subscribe</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom notes -->
+    <div class="pricing-footer">
+      <div class="pf-row">
+        <div class="pf-item">💳 <span data-en="Payment: 50% upfront · 50% on delivery" data-ur="ادائیگی: 50% پیشگی · 50% ڈیلیوری پر">Payment: 50% upfront · 50% on delivery</span></div>
+        <div class="pf-item">🔒 <span data-en="Secure: PayPal · Wise · Bank Transfer · Crypto" data-ur="محفوظ: پے پال · وائز · بینک ٹرانسفر">Secure: PayPal · Wise · Bank Transfer · Crypto</span></div>
+        <div class="pf-item">📞 <span data-en="Not sure? WhatsApp for a free quote" data-ur="یقین نہیں؟ مفت کوٹ کے لیے واٹس ایپ کریں">Not sure? WhatsApp for a free quote</span></div>
+      </div>
+      <a href="https://wa.me/923323011653?text=Hi%20Shakeel!%20I%20need%20a%20custom%20quote%20for%20my%20project." target="_blank" class="btn-primary" data-magnetic style="margin-top:1rem;display:inline-flex">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-en="Get a Free Custom Quote" data-ur="مفت کسٹم کوٹ حاصل کریں">Get a Free Custom Quote</span>
+        <span class="btn-shine"></span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section id="testimonials" class="section testi-section">
+  <div class="container">
+    <div class="s-label split-text" data-en="// Client Feedback" data-ur="// کلائنٹ فیڈبیک">// Client Feedback</div>
+    <h2 class="s-title split-text" data-en="What Clients Say" data-ur="کلائنٹس کیا کہتے ہیں">What Clients <span class="red">Say</span></h2>
+    <div class="testi-wrap">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card"><div class="tc-stars">★★★★★</div><p data-en='"Amazing developer and excellent communication. Shakeel delivered exactly what I envisioned — clean, fast, and production-ready. Game-changer for my business."' data-ur='"شاندار ڈویلپر اور بہترین مواصلت۔ مصطفیٰ نے بالکل وہی فراہم کیا جو میں چاہتا تھا۔"'>"Amazing developer and excellent communication. Shakeel delivered exactly what I envisioned — clean, fast, and production-ready. Game-changer for my business."</p><div class="tc-auth"><div class="tc-av">AK</div><div><div class="tc-name">Ahmad Khan</div><div class="tc-role">E-Commerce Owner</div></div></div></div>
+        <div class="testi-card"><div class="tc-stars">★★★★★</div><p data-en='"Professional work with fast delivery. SaaS dashboard built in record time with zero bugs. Technical depth is truly exceptional."' data-ur='"پروفیشنل کام اور تیز ڈیلیوری۔ ساس ڈیش بورڈ ریکارڈ وقت میں بغیر کسی غلطی کے بنایا۔"'>"Professional work with fast delivery. SaaS dashboard built in record time with zero bugs. Technical depth is truly exceptional."</p><div class="tc-auth"><div class="tc-av">SR</div><div><div class="tc-name">Sara Raza</div><div class="tc-role">SaaS Founder</div></div></div></div>
+        <div class="testi-card"><div class="tc-stars">★★★★★</div><p data-en='"Highly recommended for complex projects. MK DevWorks transformed our website into a high-performance platform. Conversion rate up 40%."' data-ur='"پیچیدہ پروجیکٹس کے لیے انتہائی سفارش کردہ۔ کنورژن ریٹ 40% بڑھی۔"'>"Highly recommended for complex projects. MK DevWorks transformed our website into a high-performance platform. Conversion rate up 40%."</p><div class="tc-auth"><div class="tc-av">MI</div><div><div class="tc-name">Muhammad Imran</div><div class="tc-role">Agency Director</div></div></div></div>
+        <div class="testi-card"><div class="tc-stars">★★★★★</div><p data-en='"Outstanding performance and attention to detail. Shakeel thinks like a business owner. Every decision was made with ROI in mind."' data-ur='"شاندار پرفارمنس اور تفصیل پر توجہ۔ مصطفیٰ ایک کاروباری مالک کی طرح سوچتے ہیں۔"'>"Outstanding performance and attention to detail. Shakeel thinks like a business owner. Every decision was made with ROI in mind."</p><div class="tc-auth"><div class="tc-av">FA</div><div><div class="tc-name">Farrukh Alvi</div><div class="tc-role">Retail Brand CEO</div></div></div></div>
+      </div>
+      <div class="testi-ctrl">
+        <button class="t-btn" id="tPrev">&#8592;</button>
+        <div class="t-dots" id="tDots"></div>
+        <button class="t-btn" id="tNext">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section id="faq" class="section faq-section">
+  <div class="container faq-inner">
+    <div class="s-label split-text" data-en="// FAQ" data-ur="// عام سوالات">// FAQ</div>
+    <h2 class="s-title split-text" data-en="Common Questions" data-ur="عام سوالات">Common <span class="red">Questions</span></h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" data-en="How long does a typical project take?" data-ur="ایک عام پروجیکٹ میں کتنا وقت لگتا ہے؟">How long does a typical project take?<span class="faq-icon">+</span></button><div class="faq-a"><p data-en="Landing pages: 3–5 days. E-Commerce: 2–3 weeks. Full SaaS: 4–8 weeks. Timelines depend on complexity and how quickly you provide content and feedback." data-ur="لینڈنگ پیج: 3-5 دن۔ ای کامرس: 2-3 ہفتے۔ ساس: 4-8 ہفتے۔">Landing pages: 3–5 days. E-Commerce: 2–3 weeks. Full SaaS: 4–8 weeks. Timelines depend on complexity and how quickly you provide content and feedback.</p></div></div>
+      <div class="faq-item"><button class="faq-q" data-en="What technologies do you use?" data-ur="آپ کون سی ٹیکنالوجیز استعمال کرتے ہیں؟">What technologies do you use?<span class="faq-icon">+</span></button><div class="faq-a"><p data-en="Frontend: Next.js, React, Tailwind CSS, TypeScript. Backend: Node.js, Express, Firebase, PostgreSQL, MongoDB. Deployment: Netlify, Vercel, DigitalOcean." data-ur="فرنٹ اینڈ: نیکسٹ جے ایس، ری ایکٹ۔ بیک اینڈ: نوڈ جے ایس، فائر بیس۔">Frontend: Next.js, React, Tailwind CSS, TypeScript. Backend: Node.js, Express, Firebase, PostgreSQL, MongoDB. Deployment: Netlify, Vercel.</p></div></div>
+      <div class="faq-item"><button class="faq-q" data-en="Do you provide post-launch support?" data-ur="کیا آپ لانچ کے بعد سپورٹ فراہم کرتے ہیں؟">Do you provide post-launch support?<span class="faq-icon">+</span></button><div class="faq-a"><p data-en="Yes — all projects include at least 1–3 months of support depending on package. Extended maintenance plans available with 24/7 WhatsApp response." data-ur="ہاں — تمام پروجیکٹس میں 1-3 ماہ کی سپورٹ شامل ہے۔">Yes — all projects include at least 1–3 months of support depending on package. Extended maintenance plans available with 24/7 WhatsApp response.</p></div></div>
+      <div class="faq-item"><button class="faq-q" data-en="Can you work with an existing codebase?" data-ur="کیا آپ موجودہ کوڈ بیس کے ساتھ کام کر سکتے ہیں؟">Can you work with an existing codebase?<span class="faq-icon">+</span></button><div class="faq-a"><p data-en="Absolutely. I regularly audit, refactor, and extend existing projects in React, Next.js, Node.js, and vanilla JS. Provide your repo and I'll review it first." data-ur="بالکل۔ میں موجودہ پروجیکٹس کو آڈٹ، ریفیکٹر اور بڑھاتا ہوں۔">Absolutely. I regularly audit, refactor, and extend existing projects in React, Next.js, Node.js, and vanilla JS. Provide your repo and I'll review it first.</p></div></div>
+      <div class="faq-item"><button class="faq-q" data-en="What is your payment process?" data-ur="آپ کا پیمنٹ پروسیس کیا ہے؟">What is your payment process?<span class="faq-icon">+</span></button><div class="faq-a"><p data-en="50% upfront to start, 50% on delivery. I accept bank transfer, PayPal, Wise, and crypto. WhatsApp me and we'll discuss your preferred method." data-ur="شروع میں 50%، ڈیلیوری پر 50%۔ بینک ٹرانسفر، پے پال، وائز قبول ہیں۔">50% upfront to start, 50% on delivery. I accept bank transfer, PayPal, Wise, and crypto. WhatsApp me and we'll discuss your preferred method.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BLOG ══ -->
+<section id="blog" class="section blog-section">
+  <div class="container">
+    <div class="s-label split-text" data-en="// Insights" data-ur="// بصیرت">// Insights</div>
+    <h2 class="s-title split-text" data-en="Dev Insights &amp; Tips" data-ur="ڈیو بصیرت اور ٹپس">Dev Insights & <span class="red">Tips</span></h2>
+    <div class="blog-grid">
+      <div class="blog-card stagger-card" data-tilt data-tilt-max="5">
+        <div class="blog-cat" data-en="Performance" data-ur="پرفارمنس">Performance</div>
+        <h4 data-en="Why Your Next.js Site Scores Below 90 on Lighthouse (And How to Fix It)" data-ur="آپ کی نیکسٹ جے ایس سائٹ لائٹ ہاؤس پر 90 سے کم کیوں ہے؟">Why Your Next.js Site Scores Below 90 on Lighthouse (And How to Fix It)</h4>
+        <p data-en="Five common culprits — unoptimized images, render-blocking fonts, unused JS, missing meta and poor LCP strategy — and exactly how to fix each." data-ur="پانچ عام وجوہات اور انہیں ٹھیک کرنے کا طریقہ۔">Five common culprits — unoptimized images, render-blocking fonts, unused JS, missing meta and poor LCP strategy — and exactly how to fix each.</p>
+        <div class="blog-foot"><span data-en="5 min read" data-ur="5 منٹ">5 min read</span><a href="https://wa.me/923323011653" class="blog-cta" data-en="Read more ↗" data-ur="مزید پڑھیں ↗">Read more ↗</a></div>
+      </div>
+      <div class="blog-card stagger-card" data-tilt data-tilt-max="5">
+        <div class="blog-cat" data-en="Architecture" data-ur="آرکیٹیکچر">Architecture</div>
+        <h4 data-en="Firebase vs PostgreSQL for SaaS: When to Use Which (2025 Decision Guide)" data-ur="ساس کے لیے فائر بیس بمقابلہ پوسٹ گری ایس کیو ایل">Firebase vs PostgreSQL for SaaS: When to Use Which (2025 Decision Guide)</h4>
+        <p data-en="A practical breakdown of when Firebase's real-time, serverless model beats structured SQL — and when it doesn't. Based on 20+ production apps." data-ur="فائر بیس اور پوسٹ گری کے درمیان عملی فیصلہ گائیڈ۔">A practical breakdown of when Firebase beats structured SQL — and when it doesn't. Based on 20+ production apps.</p>
+        <div class="blog-foot"><span data-en="7 min read" data-ur="7 منٹ">7 min read</span><a href="https://wa.me/923323011653" class="blog-cta" data-en="Read more ↗" data-ur="مزید پڑھیں ↗">Read more ↗</a></div>
+      </div>
+      <div class="blog-card stagger-card" data-tilt data-tilt-max="5">
+        <div class="blog-cat" data-en="E-Commerce" data-ur="ای کامرس">E-Commerce</div>
+        <h4 data-en="Guest Checkout in Firebase: The Complete 2025 Implementation Guide" data-ur="فائر بیس میں گیسٹ چیک آؤٹ کا مکمل گائیڈ">Guest Checkout in Firebase: The Complete 2025 Implementation Guide</h4>
+        <p data-en="How to allow unauthenticated purchases without breaking Auth guards — including the navbar requireAuth fix, order tracking, and Firestore rules." data-ur="غیر تصدیق شدہ خریداری کی اجازت — آتھ گارڈز کو توڑے بغیر۔">How to allow unauthenticated purchases without breaking Auth guards — including the navbar requireAuth fix and Firestore rules.</p>
+        <div class="blog-foot"><span data-en="8 min read" data-ur="8 منٹ">8 min read</span><a href="https://wa.me/923323011653" class="blog-cta" data-en="Read more ↗" data-ur="مزید پڑھیں ↗">Read more ↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" class="section contact-section">
+  <div class="contact-glow"></div>
+  <div class="container contact-inner">
+    <div class="s-label split-text" data-en="// Get In Touch" data-ur="// رابطہ کریں">// Get In Touch</div>
+    <h2 class="s-title split-text" data-en="Let's Build Something Amazing" data-ur="کچھ شاندار بنائیں">Let's Build <span class="red">Something Amazing</span></h2>
+    <p class="contact-sub split-text" data-en="Ready to transform your idea into a high-performance digital product? I'm one message away." data-ur="اپنے آئیڈیا کو ڈیجیٹل پروڈکٹ میں بدلنے کے لیے تیار؟ میں ایک پیغام دور ہوں۔">Ready to transform your idea into a high-performance digital product? I'm one message away.</p>
+    <div class="contact-card">
+      <div class="cc-l">
+        <div class="cc-i"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><div><span class="cc-lbl" data-en="WhatsApp" data-ur="واٹس ایپ">WhatsApp</span><span class="cc-val">+92 332 3011653</span></div></div>
+        <div class="cc-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><div><span class="cc-lbl" data-en="Response Time" data-ur="جوابی وقت">Response Time</span><span class="cc-val" data-en="Within 1 hour" data-ur="1 گھنٹے میں">Within 1 hour</span></div></div>
+        <div class="cc-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><div><span class="cc-lbl" data-en="Availability" data-ur="دستیابی">Availability</span><span class="cc-val" data-en="Open to projects" data-ur="پروجیکٹس کے لیے دستیاب">Open to projects</span></div></div>
+      </div>
+      <div class="cc-r">
+        <div class="cc-cta-lbl" data-en="Ready to start?" data-ur="شروع کرنے کے لیے تیار؟">Ready to start?</div>
+        <a href="https://wa.me/923323011653" target="_blank" class="btn-wa-pulse" data-magnetic>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-en="Contact on WhatsApp" data-ur="واٹس ایپ پر رابطہ کریں">Contact on WhatsApp</span>
+          <span class="btn-shine"></span>
+        </a>
+        <div class="cc-note" data-en="No forms. No waiting. Direct line." data-ur="کوئی فارم نہیں۔ انتظار نہیں۔">No forms. No waiting. Direct line.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <svg viewBox="0 0 110 64" xmlns="http://www.w3.org/2000/svg" style="height:38px"><defs><filter id="fglow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><ellipse cx="55" cy="18" rx="11" ry="12" fill="#080000" stroke="#ff1a1a" stroke-width="0.8"/><rect x="44" y="28" width="22" height="24" rx="3.5" fill="#080000" stroke="#ff1a1a" stroke-width="0.8"/><ellipse cx="49.5" cy="16.5" rx="2.2" ry="1.8" fill="#ff1a1a" filter="url(#fglow)"/><ellipse cx="60.5" cy="16.5" rx="2.2" ry="1.8" fill="#ff1a1a" filter="url(#fglow)"/><text x="43" y="62" font-family="Orbitron" font-size="12" font-weight="900" fill="#ff1a1a" filter="url(#fglow)">MK</text></svg>
+      <div><div class="fn" data-en="MK DevWorks" data-ur="ایم کے ڈیو ورکس">MK DevWorks</div><div class="ft" data-en="Senior Full Stack Studio" data-ur="سینئر فل اسٹیک اسٹوڈیو">Senior Full Stack Studio</div></div>
+    </div>
+    <div class="footer-col"><div class="fc-t" data-en="Navigation" data-ur="نیویگیشن">Navigation</div><a href="#home" data-en="Home" data-ur="ہوم">Home</a><a href="#about" data-en="About" data-ur="بارے میں">About</a><a href="#skills" data-en="Skills" data-ur="مہارتیں">Skills</a><a href="#projects" data-en="Projects" data-ur="پروجیکٹس">Projects</a><a href="#contact" data-en="Contact" data-ur="رابطہ">Contact</a></div>
+    <div class="footer-col"><div class="fc-t" data-en="Services" data-ur="خدمات">Services</div><span data-en="Full Stack Dev" data-ur="فل اسٹیک">Full Stack Dev</span><span data-en="E-Commerce" data-ur="ای کامرس">E-Commerce</span><span data-en="SaaS Platforms" data-ur="ساس پلیٹ فارمز">SaaS Platforms</span><span data-en="Optimization" data-ur="آپٹیمائزیشن">Optimization</span></div>
+    <div class="footer-col"><div class="fc-t" data-en="Contact" data-ur="رابطہ">Contact</div><a href="https://wa.me/923323011653" target="_blank" data-en="WhatsApp" data-ur="واٹس ایپ">WhatsApp</a><span>+92 332 3011653</span><span data-en="Pakistan — Remote Worldwide" data-ur="پاکستان — دنیا بھر سے">Pakistan — Remote Worldwide</span></div>
+  </div>
+  <div class="footer-bottom">
+    <span data-en="© 2025 MK DevWorks. Crafted by Shakeel Ahmed." data-ur="© 2025 ایم کے ڈیو ورکس۔ شکیل احمد کی تخلیق۔">© 2025 MK DevWorks. Crafted by Shakeel Ahmed.</span>
+    <div><a href="robots.txt">robots.txt</a><a href="sitemap.xml">Sitemap</a></div>
+  </div>
+</footer>
+
+<!-- ══ FLOATING WA ══ -->
+<a href="https://wa.me/923323011653" target="_blank" class="float-wa" id="floatWa" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="fwa-label" data-en="Let's Talk" data-ur="بات کریں">Let's Talk</span>
+</a>
+
+<!-- ══ SCROLL TOP ══ -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- ══ VIDEO SOURCE NOTE ══ -->
+<!-- Place hero-bg.mp4 in /video/ folder. Free 4K dark loops: -->
+<!-- Pixabay: https://pixabay.com/videos/search/dark%20particles/ -->
+<!-- Mixkit: https://mixkit.co/free-stock-video/dark-abstract/ -->
+<!-- Videezy: https://www.videezy.com/free-video/dark-background -->
+
+<script src="js/main.js"></script>
+</body>
+</html>
